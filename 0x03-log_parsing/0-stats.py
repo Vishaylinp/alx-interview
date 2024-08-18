@@ -13,14 +13,17 @@ try:
         l_list = line.split(" ")
 
         if len(l_list) > 4:
-            status_code = l_list[-2]
-            file_size = int(l_list[-1])
+            try:
+                status_code = l_list[-2]
+                file_size = int(l_list[-1])
 
-        if status_code in status_codes.keys():
-            status_codes[status_code] += 1
+                if status_code in status_codes.keys():
+                    status_codes[status_code] += 1
 
-        size += file_size
-        counter += 1
+                size += file_size
+                counter += 1
+            except (IndexError, ValueError) as e:
+                continue
 
     if counter == 10:
         print("File size: {}".format(size))
