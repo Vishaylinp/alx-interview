@@ -25,16 +25,15 @@ try:
     if counter == 10:
         counter = 0
         print("File size: {}".format(size))
-
         for k, v in sorted(status_codes.items()):
             if v != 0:
-                print("{}.{}".format(k, v))
+                print("{}: {}".format(k, v))
 
 except Exception as err:
     pass
 
 finally:
-    print("File size:{}".format(size))
+    print("File size: {}".format(size))
     for k, v in sorted(status_codes.items()):
         if v != 0:
             print("{}: {}".format(k, v))
