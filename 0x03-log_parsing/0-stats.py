@@ -23,11 +23,11 @@ try:
         counter += 1
 
     if counter == 10:
-        counter = 0
         print("File size: {}".format(size))
         for k, v in sorted(status_codes.items()):
             if v != 0:
                 print("{}: {}".format(k, v))
+        counter = 0
 
 except Exception as err:
     pass
