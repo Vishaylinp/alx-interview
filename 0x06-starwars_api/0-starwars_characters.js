@@ -3,7 +3,7 @@
 const request = require("request")
 
 const movie_id = process.argv[2];
-const movie_url = `https://swapi-api.alx-tools.com/api/films` + movie_id;
+const movie_url = `https://swapi-api.alx-tools.com/api/films/` + movie_id;
 
 function request_sent(character_list, index) {
   if (character_list.length === index) {
