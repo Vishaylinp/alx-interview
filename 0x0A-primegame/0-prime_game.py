@@ -14,7 +14,6 @@ def isWinner(x, nums):
     for e in range(2, int(pow(highest_num, 0.5)) + 1):
         if not check_prime[e]:
             continue
-
     for y in range(e * e, highest_num + 1, e):
         check_prime[y] = False
 
