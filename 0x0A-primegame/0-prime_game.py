@@ -26,7 +26,7 @@ def isWinner(x, nums):
         check_prime[c] = z
 
     p1 = 0
-    for x in nums:
+    for num in nums:
         p1 += check_prime[x] % 2 == 1
     if p1 * 2 == len(nums):
         return None
